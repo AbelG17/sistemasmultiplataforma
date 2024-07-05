@@ -1,0 +1,117 @@
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #00c9ff; /* respaldo para navegadores antiguos*/
+    background: -webkit-linear-gradient(to right, #92fe9d, #00c9ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92fe9d, #00c9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: var(--color-white);
+    font-family: "Noto Sans", sans-serif; 
+    min-height: 100vh; /* 100 unidades verticales*/
+}
+
+.container-main {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 3fr;
+    margin: 20px auto;
+    max-width: 1500px;
+    padding: 40px auto;
+    width: 90%;
+   
+}
+
+.banner {
+    background-position: center center ;
+   background-size: cover;
+   border: 2px solid var(--color-white);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   text-align: center;
+
+}
+.banner ul {
+  list-style: none;
+}
+
+.banner ul li {
+      
+}
+
+.banner .button {
+    background: cornflowerblue;
+    border: 3px solid var(--color-black);
+    border-radius: 100px;
+    color: var(--color-white);
+    cursor: pointer;
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.container-cards {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background-position: center center;
+    background-size: cover;
+    border-radius: 8px;
+    min-height: 210px;
+    padding: 20px;
+}
+
+.card .texts {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card .texts h5 {
+
+   text-align: right;
+}
+/* Media Queries */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .container-main{
+        grid-template-columns: 1fr;
+    }
+    .container-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+.container-cards{
+    grid-template-columns: 1fr;
+}
+}
